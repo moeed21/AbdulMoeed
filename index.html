@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ═══ META ═══════════════════════════════════════════════════ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Abdul Moeed | AI & Software Engineer</title>
+  <meta name="description" content="Abdul Moeed — CS graduate (2026) building AI-powered apps. Python, Django, LLMs, React, data analysis. Open to AI Engineer & Software Engineer roles." />
+  <meta name="keywords"    content="Abdul Moeed, AI Engineer, Software Engineer, Python, Django, LLM, React, portfolio, Pakistan" />
+  <meta name="author"      content="Abdul Moeed" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://abdulmoeed.dev/" />
+  <meta property="og:title"       content="Abdul Moeed | AI & Software Engineer" />
+  <meta property="og:description" content="CS graduate building AI-powered apps. Python, Django, LLMs, React. Open to AI & Software Engineering roles." />
+  <meta property="og:image"       content="https://abdulmoeed.dev/og-preview.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Abdul Moeed | AI & Software Engineer" />
+  <meta name="twitter:description" content="CS graduate building AI-powered apps — Python, Django, LLMs, React." />
+  <meta name="twitter:image"       content="https://abdulmoeed.dev/og-preview.png" />
+
+  <!-- Theme / PWA -->
+  <meta name="theme-color" content="#050810" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%234f8ef7'/><circle cx='50' cy='50' r='18' fill='%23050810'/></svg>" />
+
+  <!-- ═══ FONTS ═══════════════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- ═══ STYLES ══════════════════════════════════════════════════ -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Accessibility: skip to content -->
+  <a class="skip-link" href="#hero">Skip to content</a>
+
+  <!-- ─── LOADING SCREEN ─────────────────────────────────────── -->
+  <div id="loading-screen" aria-hidden="true" role="status">
+    <div class="loader-ring"></div>
+    <p class="loader-text">Initialising…</p>
+  </div>
+
+  <!-- ─── NEURAL NETWORK CANVAS (fixed bg) ──────────────────── -->
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       NAV
+  ═══════════════════════════════════════════════════════════════ -->
+  <nav role="navigation" aria-label="Main navigation">
+    <a class="nav-logo" href="#hero">
+      <span class="dot"></span>
+      AM<span>.dev</span>
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <button class="nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile full-screen menu -->
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════════════════════════ -->
+  <section id="hero" aria-labelledby="hero-heading">
+    <div class="hero-content">
+      <div class="hero-badge" role="status">
+        <span class="blink" aria-hidden="true"></span>
+        Available for opportunities
+      </div>
+
+      <h1 id="hero-heading" class="hero-name">
+        Abdul <span class="accent">Moeed</span>
+      </h1>
+
+      <p class="hero-title" aria-live="polite">
+        <span id="typed-role">AI Engineer</span>
+        <span aria-hidden="true" style="opacity:0.6; margin-left:2px;">|</span>
+      </p>
+
+      <p class="hero-tagline">
+        Building intelligent software that turns ideas into impact.
+      </p>
+
+      <div class="hero-cta" role="group" aria-label="Call to action buttons">
+        <a href="#projects" class="btn btn-primary">
+          <!-- rocket icon -->
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>
+          View Projects
+        </a>
+        <a href="assets/Abdul Moeed Resume.pdf" class="btn btn-secondary" id="cv-btn" download="Abdul_Moeed_Resume.pdf" aria-label="Download CV">
+          <!-- download icon -->
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download CV
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll nudge -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════════════════════════════ -->
+  <section id="about" aria-labelledby="about-heading">
+    <div class="section-inner">
+      <div class="about-grid">
+
+        <!-- Visual (hidden on mobile via CSS) -->
+        <div class="about-visual reveal">
+          <div class="about-avatar-ring">
+            <div class="about-avatar-inner">
+              <img src="assets/avatar.jpg"
+                   alt="Abdul Moeed — AI &amp; Software Engineer"
+                   class="avatar-photo" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="about-text">
+          <p class="section-label">Who I am</p>
+          <h2 id="about-heading" class="section-title reveal">
+            Fresh Graduate<br>Software Engineer
+          </h2>
+
+          <p class="reveal">
+            I'm a Computer Science graduate (Class of 2026) who genuinely enjoys writing code and building things that work well in the real world. Over the past few years, I've focused on full-stack web applications and practical AI integrations—from forecasting crop prices for farmers across Pakistan to building LLM pipelines that help stress-test ideas.
+          </p>
+          <p class="reveal">
+            My day-to-day stack revolves around Python, Django, React, and PostgreSQL, alongside data analysis and automation tools like Pandas and Selenium. I value clean architecture, straightforward communication, and building reliable software that delivers real value.
+          </p>
+
+          <div class="about-stats reveal" aria-label="Quick statistics">
+            <div class="stat">
+              <div class="stat-value">20+</div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">4+</div>
+              <div class="stat-label">Yrs Coding</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">2026</div>
+              <div class="stat-label">Graduation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PROJECTS
+  ═══════════════════════════════════════════════════════════════ -->
+  <section id="projects" aria-labelledby="projects-heading">
+    <div class="section-inner">
+      <p class="section-label reveal">What I've built</p>
+      <h2 id="projects-heading" class="section-title reveal">
+        Featured Projects
+      </h2>
+      <p class="reveal" style="color:var(--text-muted); max-width:520px; margin-bottom:0;">
+        Click any card to see full details. Links to live demos and source code will be added soon.
+      </p>
+
+      <!-- Projects grid — populated from data.js via JS or written inline -->
+      <div class="projects-grid" role="list">
+
+        <!-- ── AgriBazaar ── -->
+        <article class="project-card reveal"
+                 data-id="agribazaar"
+                 role="listitem"
+                 tabindex="0"
+                 aria-label="AgriBazaar project — click for details"
+                 style="--card-glow: rgba(34,197,94,0.2)">
+          <div class="card-header">
+            <span class="card-emoji" aria-hidden="true">🌾</span>
+            <div class="card-links">
+              <a href="#" class="card-link" title="GitHub" aria-label="AgriBazaar GitHub repository" target="_blank" rel="noopener">
+                <!-- github icon -->
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+              <a href="#" class="card-link" title="Live Demo" aria-label="AgriBazaar live demo" target="_blank" rel="noopener">
+                <!-- external-link icon -->
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="card-title">AgriBazaar</h3>
+          <p class="card-tagline">AI-powered agricultural marketplace</p>
+          <p class="card-desc">
+            A Django marketplace connecting farmers and buyers across Pakistan, featuring
+            AI-driven crop price forecasting and live weather API integration.
+          </p>
+          <div class="card-tech">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Django</span>
+            <span class="tech-pill">PostgreSQL</span>
+            <span class="tech-pill">Pandas</span>
+            <span class="tech-pill">NumPy</span>
+          </div>
+        </article>
+
+        <!-- ── Pocket Mind ── -->
+        <article class="project-card reveal"
+                 data-id="pocketmind"
+                 role="listitem"
+                 tabindex="0"
+                 aria-label="Pocket Mind project — click for details"
+                 style="--card-glow: rgba(124,92,252,0.22)">
+          <div class="card-header">
+            <span class="card-emoji" aria-hidden="true">🧠</span>
+            <div class="card-links">
+              <a href="#" class="card-link" title="GitHub" aria-label="Pocket Mind GitHub repository" target="_blank" rel="noopener">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+              <a href="#" class="card-link" title="Live Demo" aria-label="Pocket Mind live demo" target="_blank" rel="noopener">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="card-title">Pocket Mind</h3>
+          <p class="card-tagline">LLM pipeline for idea clarity</p>
+          <p class="card-desc">
+            An AI voice app that runs raw ideas through an LLM pipeline to automatically
+            flag hidden assumptions, logical gaps, and potential risks.
+          </p>
+          <div class="card-tech">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Django</span>
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">Celery</span>
+            <span class="tech-pill">PostgreSQL</span>
+          </div>
+        </article>
+
+        <!-- ── MapLeads ── -->
+        <article class="project-card reveal"
+                 data-id="mapleads"
+                 role="listitem"
+                 tabindex="0"
+                 aria-label="MapLeads project — click for details"
+                 style="--card-glow: rgba(79,142,247,0.22)">
+          <div class="card-header">
+            <span class="card-emoji" aria-hidden="true">📍</span>
+            <div class="card-links">
+              <a href="#" class="card-link" title="GitHub" aria-label="MapLeads GitHub repository" target="_blank" rel="noopener">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+              <a href="#" class="card-link" title="Live Demo" aria-label="MapLeads live demo" target="_blank" rel="noopener">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="card-title">MapLeads</h3>
+          <p class="card-tagline">Google Maps lead automation</p>
+          <p class="card-desc">
+            An automation tool that scrapes Google Maps business data, exports structured
+            CSVs, and generates personalized cold emails using an AI chatbot.
+          </p>
+          <div class="card-tech">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Selenium</span>
+            <span class="tech-pill">Pandas</span>
+          </div>
+        </article>
+
+      </div><!-- /projects-grid -->
+    </div><!-- /section-inner -->
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SKILLS
+  ═══════════════════════════════════════════════════════════════ -->
+  <section id="skills" aria-labelledby="skills-heading">
+    <div class="section-inner">
+      <p class="section-label reveal">What I work with</p>
+      <h2 id="skills-heading" class="section-title reveal">Skills &amp; Technologies</h2>
+
+      <!-- Skill bars grid -->
+      <div class="skills-grid" role="list">
+
+        <!-- Languages -->
+        <div class="skill-group reveal" role="listitem" aria-label="Languages">
+          <div class="skill-group-title">Languages</div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">Python</span>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="90" style="width:0"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">JavaScript</span>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="75" style="width:0"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">SQL</span>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="75" style="width:0"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">HTML / CSS</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="80" style="width:0"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">C++</span>
+              <span class="skill-pct">60%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="60" style="width:0"></div></div>
+          </div>
+        </div>
+
+        <!-- Frameworks -->
+        <div class="skill-group reveal" role="listitem" aria-label="Frameworks">
+          <div class="skill-group-title">Frameworks</div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">Django</span>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="85" style="width:0"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">React</span>
+              <span class="skill-pct">70%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="70" style="width:0"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">REST APIs</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="80" style="width:0"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">Celery</span>
+              <span class="skill-pct">65%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="65" style="width:0"></div></div>
+          </div>
+        </div>
+
+        <!-- AI & Data -->
+        <div class="skill-group reveal" role="listitem" aria-label="AI and Data">
+          <div class="skill-group-title">AI &amp; Data</div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">LLMs / OpenAI</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="80" style="width:0"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">Pandas</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="80" style="width:0"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">NumPy</span>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="75" style="width:0"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">Data Analysis</span>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="75" style="width:0"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">Selenium</span>
+              <span class="skill-pct">70%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="70" style="width:0"></div></div>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-group reveal" role="listitem" aria-label="Databases">
+          <div class="skill-group-title">Databases</div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">PostgreSQL</span>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="75" style="width:0"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">MySQL</span>
+              <span class="skill-pct">65%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="65" style="width:0"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">SQLite</span>
+              <span class="skill-pct">70%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="70" style="width:0"></div></div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-group reveal" role="listitem" aria-label="Tools">
+          <div class="skill-group-title">Tools</div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">Git / GitHub</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="80" style="width:0"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">Vercel</span>
+              <span class="skill-pct">70%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="70" style="width:0"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">VS Code</span>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="90" style="width:0"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">Linux</span>
+              <span class="skill-pct">65%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="65" style="width:0"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-row">
+              <span class="skill-name">Postman</span>
+              <span class="skill-pct">70%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" data-pct="70" style="width:0"></div></div>
+          </div>
+        </div>
+
+      </div><!-- /skills-grid -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       EXPERIENCE
+  ═══════════════════════════════════════════════════════════════ -->
+  <section id="experience" aria-labelledby="exp-heading">
+    <div class="section-inner">
+      <p class="section-label reveal">Where I've worked</p>
+      <h2 id="exp-heading" class="section-title reveal">Experience</h2>
+
+      <div class="timeline" role="list">
+
+        <!-- TechByte Solutions -->
+        <div class="timeline-item" role="listitem" aria-label="Data Analyst at TechByte Solutions">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="exp-header">
+            <span class="exp-icon" aria-hidden="true">📊</span>
+            <div class="exp-meta">
+              <div class="exp-role">Data Analyst</div>
+              <div class="exp-company">TechByte Solutions</div>
+              <div class="exp-period">Oct 2025 – Apr 2026</div>
+            </div>
+            <span class="exp-type">Full-time</span>
+          </div>
+          <ul class="exp-bullets" aria-label="Responsibilities and achievements">
+            <li>Analysed and interpreted complex datasets to surface actionable business insights for stakeholders.</li>
+            <li>Built data pipelines and dashboards to track key performance indicators across departments.</li>
+            <li>Collaborated with cross-functional teams to deliver data-driven recommendations and reports.</li>
+          </ul>
+        </div>
+
+        <!-- Freelance -->
+        <div class="timeline-item" role="listitem" aria-label="Freelance Web Developer">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="exp-header">
+            <span class="exp-icon" aria-hidden="true">💻</span>
+            <div class="exp-meta">
+              <div class="exp-role">Freelance Web Developer</div>
+              <div class="exp-company">Self-employed</div>
+              <div class="exp-period">2023 – Present</div>
+            </div>
+            <span class="exp-type">Freelance</span>
+          </div>
+          <ul class="exp-bullets" aria-label="Responsibilities and achievements">
+            <li>Designed and deployed full-stack web applications for clients across multiple industries.</li>
+            <li>Built Django backends with REST APIs consumed by React frontends, handling auth, payments, and CRUD.</li>
+            <li>Delivered AI-integrated features including LLM pipelines and web automation scripts.</li>
+          </ul>
+        </div>
+
+      </div><!-- /timeline -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════════════════════════ -->
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="section-inner">
+      <p class="section-label reveal">Let's talk</p>
+      <h2 id="contact-heading" class="section-title reveal">Get In Touch</h2>
+
+      <div class="contact-grid">
+
+        <!-- Info + links -->
+        <div class="contact-info reveal">
+          <h3>Open to opportunities</h3>
+          <p>
+            I'm actively looking for AI Engineer and Software Engineer roles.
+            Whether you have a project in mind, a question, or just want to connect —
+            my inbox is always open.
+          </p>
+
+          <div class="contact-links" role="list">
+            <a href="mailto:Moeedsethi21@gmail.com"
+               class="contact-link"
+               role="listitem"
+               aria-label="Send email to Abdul Moeed">
+              <span class="contact-link-icon" aria-hidden="true">✉️</span>
+              Moeedsethi21@gmail.com
+            </a>
+
+            <a href="https://linkedin.com/in/abdul-moeed21"
+               class="contact-link"
+               role="listitem"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Abdul Moeed on LinkedIn">
+              <span class="contact-link-icon" aria-hidden="true">🔗</span>
+              linkedin.com/in/abdul-moeed21
+            </a>
+
+            <a href="https://github.com/moeedsethi"
+               class="contact-link"
+               role="listitem"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Abdul Moeed on GitHub">
+              <span class="contact-link-icon" aria-hidden="true">
+                <!-- github icon -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </span>
+              github.com/moeedsethi
+            </a>
+
+            <a href="tel:+923356565297"
+               class="contact-link"
+               role="listitem"
+               aria-label="Call Abdul Moeed">
+              <span class="contact-link-icon" aria-hidden="true">📱</span>
+              +92-335-6565297
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="reveal">
+          <form id="contact-form" class="contact-form" action="https://formspree.io/f/mqperved" method="POST" novalidate aria-label="Contact form">
+            <div class="form-group">
+              <label class="form-label" for="form-name">NAME</label>
+              <input class="form-input"
+                     id="form-name"
+                     name="name"
+                     type="text"
+                     placeholder="Jane Smith"
+                     required
+                     autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-email">EMAIL</label>
+              <input class="form-input"
+                     id="form-email"
+                     name="email"
+                     type="email"
+                     placeholder="jane@company.com"
+                     required
+                     autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-message">MESSAGE</label>
+              <textarea class="form-textarea"
+                        id="form-message"
+                        name="message"
+                        placeholder="Tell me about the role or project…"
+                        required></textarea>
+            </div>
+
+            <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+
+            <button type="submit" class="btn btn-primary" style="align-self:flex-start; border-radius:var(--radius-sm);">
+              Send Message
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+        </div>
+
+      </div><!-- /contact-grid -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <p>
+      Designed &amp; built by <span>Abdul Moeed</span> &mdash; 2026
+      &nbsp;·&nbsp;
+      <a href="https://github.com/moeedsethi" target="_blank" rel="noopener" style="color:var(--text-muted); text-decoration:none;">github.com/moeedsethi</a>
+    </p>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PROJECT DETAIL MODAL
+  ═══════════════════════════════════════════════════════════════ -->
+  <div id="project-modal"
+       class="modal-overlay"
+       role="dialog"
+       aria-modal="true"
+       aria-labelledby="modal-title-el"
+       tabindex="-1">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Close project details">&times;</button>
+      <div class="modal-emoji" aria-hidden="true"></div>
+      <h2 class="modal-title" id="modal-title-el"></h2>
+      <p class="modal-tagline"></p>
+      <p class="modal-desc"></p>
+      <ul class="modal-highlights" aria-label="Project highlights"></ul>
+      <div class="card-tech modal-tech" style="margin-bottom:1.75rem;"></div>
+      <div class="modal-actions">
+        <a id="modal-github" href="#" class="btn btn-secondary" target="_blank" rel="noopener" aria-label="View source on GitHub">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          GitHub
+        </a>
+        <a id="modal-live" href="#" class="btn btn-primary" target="_blank" rel="noopener" aria-label="View live demo">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Live Demo
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SCRIPTS  (CDN, defer / async)
+  ═══════════════════════════════════════════════════════════════ -->
+
+  <!-- Three.js r162 (minified, CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r162/three.min.js"
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"></script>
+
+  <!-- GSAP + ScrollTrigger (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"></script>
+
+  <!-- Portfolio data (must load before main.js) -->
+  <script src="js/data.js"></script>
+
+  <!-- Main application -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
